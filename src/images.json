@@ -1,0 +1,21 @@
+{
+    "images": {
+        "main-logo": "./crowdfunding-product-page-main/images/logo.svg",
+        
+        "mastercraft-logo": "./crowdfunding-product-page-main/images/logo-mastercraft.svg",
+
+        "bookmark-icon": "./crowdfunding-product-page-main/images/icon-bookmark.svg",
+        
+        "check-icon": "./crowdfunding-product-page-main/images/icon-check.svg",
+        
+        "close-menu-icon": "./crowdfunding-product-page-main/images/icon-close-menu.svg",
+        
+        "close-modal-icon": "./crowdfunding-product-page-main/images/icon-close-modal.svg",
+        
+        "navbar-icon": "./crowdfunding-product-page-main/images/icon-hamburger.svg",
+        
+        "desktop-background": "./crowdfunding-product-page-main/images/image-hero-desktop.jgp",
+        
+        "mobile-background": "./crowdfunding-product-page-main/images/image-hero-mobile.jgp"
+    }
+}

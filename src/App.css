@@ -1,0 +1,446 @@
+/* MAIN CSS FILE FOR STYLING OUT MY REACT PROJECT PAGE.*/
+:root {
+  /* Utility variables and styles come in here. */
+
+  /* main variables */
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 100%, 100%);
+  --almost-white: hsl(0, 0%, 96%);
+
+  /* secondary variables */
+  --moderate-cyan: hsl(176, 50%, 47%);
+
+  /* tetiary variables */
+  --dark-grey: hsl(176, 72%, 28%);
+  --border-color: hsl(0, 0%, 79%);
+  --shadow-color: hsla(0, 0%, 79%, 0.471);
+  --text-white: hsl(0, 0%, 48%);
+
+  /* For pixel/percentage related styles */
+  --border-radius: 10px;
+  --rounded-border-radius: 50%;
+
+  /* desktop responsiveness width */
+  --desktop-width: 768px;
+
+  /* Typography-fonts */
+  --font-size-bold: 600;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Commissioner', sans-serif;
+}
+
+body {
+  background-color: var(--almost-white);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+body p,
+span {
+  line-height: 1.5;
+}
+
+/* default styling area */
+/* for all buttons. */
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* for all box-shadowed elements */
+
+/* the logos */
+.mastercraft {
+  position: absolute;
+  top: -2rem;
+  left: 8rem;
+}
+
+/* for the opaque box id */
+#id {
+  opacity: .5;
+}
+
+
+/* THE START OF OUR COMPONENTS STYLING */
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* WRAPPING BOTH THE NAV AND HEADER SECTIONS. */
+.NavBar {}
+
+/*.nav-header */
+.header-container {
+  background-image: url(./components/images/image-hero-mobile.jpg);
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  padding: 1rem;
+}
+
+/* Section 2 - Header Section */
+.header-container {
+  min-height: 300px;
+}
+
+.nav-header,
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Section 2 - End of Header Section */
+
+/* Section 3 - Navigation Section */
+.nav-container {
+  margin: 1em;
+  font-size: 1rem;
+}
+
+.navigation {
+  /* display: flex; */
+  align-items: center;
+}
+
+/* for when we open the navBar (layout style) */
+.position-absolute {
+  position: relative;
+}
+
+.opened-nav-menu {
+  background: var(--white);
+  border-radius: 10px;
+  position: absolute;
+  top: 2em;
+  right: 3rem;
+  z-index: 10;
+}
+
+.nav-items,
+.nav-items2 {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-items2 {
+  display: none;
+}
+
+.nav-items li {
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: .9em .8em;
+  cursor: pointer;
+}
+
+.nav-items li:nth-of-type(3) {
+  border-bottom: 0;
+  padding-bottom: 0;
+  width: 20ch;
+}
+
+.nav-button,
+.close-menu {
+  z-index: 2;
+  position: absolute;
+  right: 1.3em;
+  top: 1.2em;
+}
+
+/* button for closing the menu */
+.close-menu {
+  display: none;
+}
+
+/* Section 3 - End of Navigation Section */
+
+/* Section 4 - Body Section */
+.body-container {
+  margin: 2em;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+  top: 12em;
+}
+
+.upper-body,
+.middle-body,
+.lower-body,
+.modal-container {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 0.9rem;
+  padding: 1.8em;
+  text-align: center;
+  max-width: 40ch;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--shadow-color);
+  /* box-shadow: 0 0 3px 0 var(--shadow-color); */
+}
+
+.upper-body {
+  position: relative;
+  max-width: 40ch;
+}
+
+/* the upper body part */
+.upper-body h1 {
+  font-size: 1.5em;
+}
+
+.upper-body p {
+  max-width: 60ch;
+  color: var(--text-white);
+}
+
+.upper-body>* {
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+
+/* The back this project button is the same as the reward button (in styles) */
+.upper-body .back,
+.reward-button {
+  --btn-radius: 20px;
+  color: var(--white);
+  padding: .8em 1.2em;
+  border-radius: var(--btn-radius);
+  background-color: var(--moderate-cyan);
+  font-size: var(--font-size-bold);
+}
+
+.open-bookmark {
+  background-color: var(--dark-grey);
+  /* border-radius: var(--rounded-border-radius); */
+  padding: 1rem;
+}
+
+/* the middle body part */
+.middle-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* Select all section's second paragraphs except from the third section's own, and the whole fourth section */
+:is(.middle-body section p:nth-of-type(2)):not(.middle-body section:nth-of-type(3) p:nth-of-type(2), .middle-body section:nth-of-type(4)) {
+  border-bottom: 1px solid var(--white);
+}
+
+.middle-body p:nth-of-type(1) {
+  font-size: 2em;
+  font-weight: var(--font-size-bold);
+  margin: 0;
+}
+
+.middle-body p:nth-of-type(2) {
+  font-size: .9em;
+  padding: 0 0 1.2em 0;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.range,
+.range-value {
+  border-radius: var(--border-radius);
+  height: 10px;
+}
+
+.range {
+  width: 100%;
+  background-color: var(--almost-white);
+}
+
+.range-value {
+  width: 80%;
+  background-color: var(--moderate-cyan);
+}
+
+/* the lower body part */
+.lower-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.lower-body p {
+  font-size: 1em;
+}
+
+.lower-body .header p {
+  font-weight: 600;
+}
+
+.lower-body .header p:nth-of-type(2) {
+  color: var(--moderate-cyan);
+  margin-top: .5rem;
+}
+
+.lower-body span {
+  color: var(--text-white);
+}
+
+.lower-body .item {
+  display: block;
+  margin-top: .5em;
+}
+
+.lower-body .item-bold {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.text,
+.content {
+  color: var(--text-white);
+}
+
+/* The flex layout for the dynamic data */
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  justify-content: center;
+  margin: 1em;
+}
+
+/* once for all for the contents in the flex box */
+.card {
+  border: 1px solid var(--border-color);
+  padding: 1em;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+}
+
+.card .header {
+  margin: 0 0 2em;
+}
+
+.item p.item {
+  margin-bottom: 2em;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card .header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card .content {
+  font-size: 1.1em;
+}
+
+/* Section 4 - End of Body Section */
+
+/* Section 5 - The Modal */
+.modal-container {
+  position: absolute;
+  top: -5rem;
+  background-color: white;
+}
+
+.modal-container :is(.head, .header, .label-container) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-container .head>* {
+  padding: 0;
+}
+
+.modal-container p {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.modal-container .header {
+  flex-direction: row;
+  gap: .5em;
+  justify-content: flex-start;
+}
+
+/* for those who have subtitle */
+.label-container {
+  flex-direction: column;
+}
+
+/* Section 5 - End of the Modal */
+
+/* THE END OF OUR COMPONENTS STYLING */
+
+/* DESKTOP RESPONSIVENESS START */
+@media (min-width: 768px) {
+
+  .mastercraft {
+    left: 10rem;
+  }
+
+  .nav-button,
+  .close-menu {
+    visibility: hidden;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-items2 {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 1em;
+    color: var(--white);
+  }
+
+  .nav-items2 li {
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+  }
+
+  .nav-items2 li:hover {
+    text-decoration: underline;
+  }
+}
+
+/* DESKTOP RESPONSIVENESS END */
